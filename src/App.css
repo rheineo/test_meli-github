@@ -1,0 +1,145 @@
+:root {
+  --amarillo: #ffe600;
+  --azul: #3483fa;
+  --grisFuerte: #333333;
+  --grisMedio: #666666;
+  --grisSuave: #999999;
+  --grisBlanco: #eeeeee;
+  --blanco: #ffffff;
+}
+
+.w-full {
+  width: 60em;
+}
+
+.df {
+  display: flex;
+}
+
+.w-full2 {
+  width: 55em;
+}
+.App {
+  text-align: center;
+  background-color: var(--grisBlanco);
+}
+
+.bg-amarillo {
+  background-color: var(--amarillo);
+}
+
+.bg-grisBlanco {
+  background-color: var(--grisBlanco);
+}
+
+.searchForm-wrapper {
+  display: flex;
+  justify-content: center;
+  
+  height: 10vh;
+  align-items: center;
+}
+
+.productosList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1em 0em 4em 0em;
+ 
+}
+
+.productosList-item {
+  width: 100%;
+  border-bottom: 1px solid var(--grisSuave);
+  background-color: var(--blanco);
+}
+
+.productoDescripcion {
+  background-color: var(--blanco);
+}
+
+.cardML {
+  width: 180px;
+  height: 180px;
+  border-radius: 4%;
+}
+
+.cardDescripcion {
+  text-align: initial;
+}
+
+.imageML {
+  width: 180px;
+  height: 180px;
+  border-radius: 4px;
+}
+
+.detalleImageML {
+  width: 680px;
+  height: 680px;
+  border-radius: 4px;
+}
+.buttonComprar {
+  background-color: var(--azul) !important;
+  width: 80%;
+}
+
+.box1 {
+  display: flex;
+  align-items: stretch;
+}
+
+.boxPriceProducto {
+  text-align: left;
+  margin-top: 16px;
+  width: 50%;
+}
+
+.price {
+  margin-bottom: 32px;
+  margin-top: 16px;
+}
+
+.detalleTitleProducto {
+  width: 360px;
+}
+.detallePrice {
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.boxCiudad {
+  text-align: center;
+  margin-top: 32px;
+  width: 25%;
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+.fz-12 {
+  font-size: 12px;
+}
+
+.fz-14 {
+  font-size: 14px;
+}
+.fz-16 {
+  font-size: 16px;
+}
+.fz-18 {
+  font-size: 18px;
+}
+
+.fz-24 {
+  font-size: 24px;
+}
+
+.fz-28 {
+  font-size: 28px;
+}
+
+.fz-46 {
+  font-size: 46px;
+}
