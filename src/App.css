@@ -24,6 +24,12 @@
   background-color: var(--grisBlanco);
 }
 
+.Home {
+  text-align: center;
+  background-color: var(--grisBlanco);
+  height: 600px;
+}
+
 .bg-amarillo {
   background-color: var(--amarillo);
 }
