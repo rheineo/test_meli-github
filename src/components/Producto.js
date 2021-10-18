@@ -9,7 +9,7 @@ export class Producto extends Component {
     static propTypes = {
         id: PropTypes.string,
         title: PropTypes.string,
-        price: PropTypes.string,
+        price: PropTypes.number,
         city: PropTypes.string,
         poster: PropTypes.string
     }
