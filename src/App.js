@@ -15,33 +15,37 @@ class App extends Component {
   state = { usedSearch: false, query: {} }
 
   _handleResults = (query) => {
-    console.log(query)
+    console.log("query",query)
     this.setState({ query, usedSearch: true })
   }
 
   _renderResults() {
-    const { query } = this.state
+    let { query, usedSearch } = this.state
+    if (!usedSearch) {
+      query = 'all'
+    }
+   
     return this.state.query ?
       <Redirect to={`/items/search=${query}`} />
-      : <p>Sin Resultados</p>
+      : ''
   }
 
   render() {
     return (
       <div className="App">
-        <div class="columns is-desktop bg-amarillo">
-          <div class="column is-1"></div>
-          <div class="column is-10">
+        <div className="columns is-desktop bg-amarillo">
+          <div className="column is-1"></div>
+          <div className="column is-10">
             <div className='searchForm-wrapper'>
               <SearchForm onResults={this._handleResults} />
             </div>
           </div>
         </div>
-        <div class="column is-1"></div>
+        <div className="column is-1"></div>
 
-       <div class="columns is-desktop bg-grisBlanco">
-          <div class="column is-1"></div>
-          <div class="column is-10">
+       <div className="columns is-desktop bg-grisBlanco">
+          <div className="column is-1"></div>
+          <div className="column is-10">
           {this._renderResults() }
 
 
@@ -54,7 +58,7 @@ class App extends Component {
 
           </div>
         </div>
-        <div class="column is-1"></div>
+        <div className="column is-1"></div>
 
 
         
