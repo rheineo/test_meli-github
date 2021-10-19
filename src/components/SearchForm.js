@@ -16,7 +16,6 @@ export class SearchForm extends Component {
     _handleSubmit = (e) => {
         const { inputSearch } = this.state
         e.preventDefault()
-        this.props.onResults(null)
         this.props.onResults(inputSearch)
     }
     render() {

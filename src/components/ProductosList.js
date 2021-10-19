@@ -22,18 +22,17 @@ export class ProductosList extends Component {
       .then(res => res.json())
       .then(result => {
         const { results = [], paging = {} } = result
-        console.log({ results, paging })
         this.setState({ productos: results })
       })
   }
 
-  componentDidMount() {
-    console.log(this.props)
+  componentWillMount() {
     const { query } = this.props.match.params
     this._fetchListProducto({ query: query })
   }
 
   render() {
+    this.componentWillMount()
     const { productos } = this.state
     return (
       <div className='productosList'>

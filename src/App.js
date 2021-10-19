@@ -15,7 +15,6 @@ class App extends Component {
   state = { usedSearch: false, query: {} }
 
   _handleResults = (query) => {
-    console.log("query",query)
     this.setState({ query, usedSearch: true })
   }
 

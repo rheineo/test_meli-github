@@ -32,7 +32,6 @@ export class Detail extends Component {
         fetch(`https://api.mercadolibre.com/items/${id}`)
             .then(res => res.json())
             .then(producto => {
-                console.log({ producto })
                 this.setState({ producto: producto })
             })
     }
@@ -41,13 +40,11 @@ export class Detail extends Component {
         fetch(`https://api.mercadolibre.com/items/${id}/description`)
             .then(res => res.json())
             .then(productoDesc => {
-                console.log({ productoDesc })
                 this.setState({ productoDescripcion: productoDesc })
             })
     }
 
     _obtenerImagen(pictures) {
-        console.log("this.state.producto.pictures", pictures);
         let sw= false;
         let img = null;
         if (pictures?.length > 0) {
@@ -64,7 +61,6 @@ export class Detail extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props)
         const { id } = this.props.match.params
         this._fetchProducto({ id: id })
         this._fetchProductoDescripcion({ id: id })
