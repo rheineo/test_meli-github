@@ -23,9 +23,9 @@ const range = (from, to, step = 1) => {
 class Pagination extends Component {
   constructor(props) {
     super(props);
-    const { totalRecords = null, pageLimit = 30, pageNeighbours = 0 } = props;
+    const { totalRecords = null, pageLimit = 4, pageNeighbours = 0 } = props;
 
-    this.pageLimit = typeof pageLimit === 'number' ? pageLimit : 30;
+    this.pageLimit = typeof pageLimit === 'number' ? pageLimit : 4;
     this.totalRecords = typeof totalRecords === 'number' ? totalRecords : 0;
 
     // pageNeighbours can be: 0, 1 or 2
@@ -112,7 +112,7 @@ class Pagination extends Component {
 
     return (
       <Fragment>
-        <nav aria-label="Countries Pagination">
+        <nav aria-label="Productos Pagination">
           <ul className="pagination">
             { pages.map((page, index) => {
 
@@ -120,7 +120,7 @@ class Pagination extends Component {
                 <li key={index} className="page-item">
                   <a className="page-link" href="#" aria-label="Previous" onClick={this.handleMoveLeft}>
                     <span aria-hidden="true">&laquo;</span>
-                    <span className="sr-only">Previous</span>
+                    <span className="sr-only">Anterior</span>
                   </a>
                 </li>
               );
@@ -129,7 +129,7 @@ class Pagination extends Component {
                 <li key={index} className="page-item">
                   <a className="page-link" href="#" aria-label="Next" onClick={this.handleMoveRight}>
                     <span aria-hidden="true">&raquo;</span>
-                    <span className="sr-only">Next</span>
+                    <span className="sr-only">Siguiente</span>
                   </a>
                 </li>
               );
